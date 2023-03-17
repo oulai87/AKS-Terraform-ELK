@@ -8,33 +8,33 @@ locals {
 }
 
 variable "address_space" {
-  default = ["10.1.0.0/16","10.1.0.0/24","10.1.0.0/32"]
+  default = ["10.1.0.0/16", "10.1.0.0/24", "10.1.0.0/32"]
 }
 
 variable "dns_prefix" {
-  default ="azurek8sdemo"
+  default = "azurek8sdemo"
 }
 
 variable "agent_pool" {
-  default = ["defaultpool","Standard_D2s_v3"]
+  default = ["defaultpool", "Standard_D2s_v3"]
 }
 
 variable "client_secret" {
-  default =""
+  default = ""
 }
 
 variable "client_id" {
-  default =""
+  default = ""
 }
 
 variable "tags" {
   default = {
     terraform = "yes",
-    resource = "AKS",
-    purpose = "demo"
+    resource  = "AKS",
+    purpose   = "demo"
   }
 }
 
 variable "network_profile" {
-   default = ["azure","kubenet","Standard"]
+  default = ["azure", "kubenet", "Standard"]
 }
