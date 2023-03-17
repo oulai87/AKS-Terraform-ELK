@@ -53,7 +53,7 @@ resource "azurerm_public_ip" "public_ip" {
 resource "azurerm_kubernetes_cluster" "k8s_cluster" {
   dns_prefix         = var.dns_prefix
   location           = var.location
-  kubernetes_version = "1.24"
+  kubernetes_version = "1.24.9"
   name               = "${local.common_name}-k8scluster"
 
   resource_group_name = azurerm_resource_group.azure_k8s.name
